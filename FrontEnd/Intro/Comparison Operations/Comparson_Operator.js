@@ -1,0 +1,10 @@
+let str1="a";
+let str2="B";
+let num3=20;
+let num4=10;
+console.log(`str1 is ${str1} and str2 is ${str2}`);
+console.log(`num3 is ${num3} and num4 is ${num4}`);
+console.log(`str1>str2 is ${str1>str2}`);
+console.log(`num3>num4 is ${num3>num4}`);
+console.log(`num3<=num4 is ${num3<=num4}`);
+console.log(`num3>=num4 is ${num3>=num4}`);
