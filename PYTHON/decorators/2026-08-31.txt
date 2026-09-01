@@ -1,1 +1,2 @@
 2026-08-31T14:53:17.544532 : function:hello  duration:0.1.ms
+2026-08-31T14:56:30.436305 : function:big_count  duration:5147.73.ms

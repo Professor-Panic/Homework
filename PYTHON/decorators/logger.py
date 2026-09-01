@@ -14,4 +14,9 @@ def logger(func):
 @logger
 def hello():
     print("hello")
-hello()
+@logger
+def big_count():
+    for i in range(100000):
+        print(i)
+        pass
+big_count()
