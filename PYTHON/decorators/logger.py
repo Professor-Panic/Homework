@@ -11,6 +11,7 @@ def logger(func):
         with open(f"{today}.txt","a") as f:
             f.write(f"{timestamp} : function:{func.__name__}  duration:{duration}.ms\n")
     return wrapper
+
 @logger
 def hello():
     print("hello")
