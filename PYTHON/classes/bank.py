@@ -29,7 +29,8 @@ class Bank:
         self.name = name
         self.no = no
         self._cash = amount
-        self._log=[] 
+        self._log=[]
+        Bank.clients+=1 
     @property
     def cash(self):  
         return self._cash
