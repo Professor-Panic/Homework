@@ -30,7 +30,7 @@ class Bank:
         self.no = no
         self._cash = amount
         self._log=[]
-        Bank.clients+=1 
+        self.__class__.add_client(self.__class__) 
     @property
     def cash(self):  
         return self._cash
@@ -68,5 +68,15 @@ class Bank:
         print(f"Name: {self.name}")
         print(f"Balance: {self._cash}")
         print(f"Account No: {self.no}")
+    @staticmethod
+    def calculate_interest(principal,years,compounds_per_year,rate):
+        rates=1+(rate*0.01)/compounds_per_year
+        ammount=principal*pow(rates,compounds_per_year*years)
+        print(f"If you take a loan of {principal} you will eventually pay {round(ammount,2)}")
+    @staticmethod
+    def add_client(cls):
+        cls.clients+=1
 test=Bank("Tedd",1,20)
+Bank.calculate_interest(principal=20000,years=2,compounds_per_year=2,rate=20.0)
 print(Bank.bank_name)
+print(Bank.clients)
